@@ -1,0 +1,21 @@
+parameters:
+    bootstrap: %currentWorkingDirectory%/vendor/autoload.php
+    autoload_directories:
+        - %currentWorkingDirectory%/web/core/
+        - %currentWorkingDirectory%/web/modules/
+        - %currentWorkingDirectory%/web/profiles/
+        - %currentWorkingDirectory%/web/sites/
+        - %currentWorkingDirectory%/web/themes/
+    autoload_files:
+        - %currentWorkingDirectory%/web/core/includes/bootstrap.inc
+    excludes_analyse:
+        - %currentWorkingDirectory%/bin/*
+        - %currentWorkingDirectory%/build/*
+        - %currentWorkingDirectory%/config/*
+        - %currentWorkingDirectory%/private/*
+        - %currentWorkingDirectory%/tmp/*
+        - %currentWorkingDirectory%/vendor/*
+    fileExtensions:
+        - php
+        - module
+        - inc

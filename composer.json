@@ -21,6 +21,12 @@
         "drupal-composer/drupal-scaffold": "^2.2",
         "drupal/console": "~1.0",
         "drupal/core": "~8.0",
+        "drupal/entity_print": "^2.0",
+        "drupal/facets": "^1.0@alpha",
+        "drupal/pathauto": "^1.0",
+        "drupal/search_api": "^1.1",
+        "drupal/simple_sitemap": "^2.9",
+        "drupal/workspace": "^1.0@beta",
         "drush/drush": "~8.0",
         "webflo/drupal-finder": "^0.3.0",
         "webmozart/path-util": "^2.3"
@@ -67,8 +73,10 @@
             "web/core": ["type:drupal-core"],
             "web/libraries/{$name}": ["type:drupal-library"],
             "web/modules/contrib/{$name}": ["type:drupal-module"],
+            "web/modules/custom/{$name}": ["type:drupal-custom-module"],
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
+            "web/themes/custom/{$name}": ["type:drupal-custom-theme"],
             "drush/contrib/{$name}": ["type:drupal-drush"]
         }
     }

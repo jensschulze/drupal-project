@@ -25,7 +25,7 @@ for your setup.
 After that you can create the project:
 
 ```
-composer create-project jensschulze/drupal-project:8.x-dev some-dir --stability dev --no-interaction
+composer create-project jensschulze/drupal-project:develop-dev some-dir --stability dev --no-interaction
 ```
 
 With `composer require ...` you can download new dependencies to your 

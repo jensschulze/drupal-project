@@ -1,0 +1,7 @@
+.git/
+.idea/
+*.iws
+*.DS_Store
+._*
+node_modules/
+web/sites/**/files/

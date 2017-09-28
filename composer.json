@@ -25,6 +25,7 @@
         "drupal/console": "~1.0",
         "drupal/config_split": "^1.0@beta",
         "drupal/core": "~8.0",
+        "drupal/csv_serialization": "^1.0",
         "drupal/diff": "^1.0@RC",
         "drupal/entity_browser": "^1.0",
         "drupal/entity_print": "^2.0",

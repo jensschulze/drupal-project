@@ -1,7 +1,7 @@
 # Extended Composer template for Drupal projects
 
 Forked from [drupal-composer/drupal-project](https://github.com/drupal-composer/drupal-project) (Find the full documentation there!). Slightly altered configuration and some pre-installed modules.
-[![Build Status](https://travis-ci.org/jensschulze/drupal-project.svg?branch=develop)](https://travis-ci.org/jensschulze/drupal-project)
+[![Build Status](https://travis-ci.org/jensschulze/drupal-project.svg?branch=install-profile)](https://travis-ci.org/jensschulze/drupal-project)
 
 This project template should provide a kickstart for managing your site
 dependencies with [Composer](https://getcomposer.org/).

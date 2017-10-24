@@ -49,6 +49,7 @@
         "drupal/simple_sitemap": "^2.9",
         "drupal/styled_google_map": "^1.2",
         "drupal/twig_tweak": "^1.7",
+        "drupal/views_field_view": "^1.0@beta",
         "drupal/webform": "^5.0@beta",
         "drupal/workspace": "^1.0@beta",
         "drush/drush": "^9.0",

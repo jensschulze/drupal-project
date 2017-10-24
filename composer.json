@@ -51,6 +51,7 @@
         "drupal/paragraphs": "^1.1",
         "drupal/pathauto": "^1.0",
         "drupal/profile": "^1.0@alpha",
+        "drupal/rest_export_nested": "^1.0@alpha",
         "drupal/restui": "^1.15",
         "drupal/search_api": "^1.1",
         "drupal/search_api_autocomplete": "^1.0@alpha",

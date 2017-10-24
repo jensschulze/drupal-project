@@ -35,6 +35,7 @@
         "drupal/core": "~8.0",
         "drupal/csv_serialization": "^1.0",
         "drupal/diff": "^1.0@RC",
+        "drupal/druqs": "^1.0",
         "drupal/entity_browser": "^1.0",
         "drupal/entity_print": "^2.0",
         "drupal/facets": "^1.0@alpha",

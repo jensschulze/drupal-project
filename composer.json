@@ -63,7 +63,6 @@
         "drupal/webform": "^5.0@beta",
         "drupal/workspace": "^1.0@beta",
         "drush/drush": "^9.0",
-        "hirak/prestissimo": "^0.3.7",
         "jensschulze/basicdrupal": "dev-master",
         "jensschulze/config_diff_export": "dev-master",
         "webflo/drupal-finder": "^0.3.0",

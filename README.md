@@ -15,3 +15,10 @@ Tested under the [newest "production ready" PHP version](http://php.net/supporte
 ```
 composer create-project jensschulze/drupal-project:install-profile-dev some-dir --stability dev --no-interaction
 ```
+
+## Suggestions
+
+Use the [hirak/prestissimo](https://packagist.org/packages/hirak/prestissimo) Composer parallel download plug-in:
+```
+composer global require hirak/prestissimo
+```

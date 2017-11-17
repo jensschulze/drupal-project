@@ -13,6 +13,14 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/jensschulze/basicdrupal.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/jensschulze/config_diff_export.git"
         }
     ],
     "require": {
@@ -55,6 +63,8 @@
         "drupal/webform": "^5.0@beta",
         "drupal/workspace": "^1.0@beta",
         "drush/drush": "^9.0",
+        "jensschulze/basicdrupal": "dev-master",
+        "jensschulze/config_diff_export": "dev-master",
         "webflo/drupal-finder": "^0.3.0",
         "webmozart/path-util": "^2.3"
     },

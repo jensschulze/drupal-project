@@ -16,11 +16,13 @@
         },
         {
             "type": "vcs",
-            "url": "https://github.com/jensschulze/basicdrupal.git"
+            "url": "https://github.com/jensschulze/basicdrupal.git",
+            "no-api": true
         },
         {
             "type": "vcs",
-            "url": "https://github.com/jensschulze/config_diff_export.git"
+            "url": "https://github.com/jensschulze/config_diff_export.git",
+            "no-api": true
         }
     ],
     "require": {

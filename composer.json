@@ -38,6 +38,7 @@
         "drupal/csv_serialization": "^1.0",
         "drupal/diff": "^1.0@RC",
         "drupal/drd": "^3.13",
+        "drupal/drd_agent": "^3.6",
         "drupal/druqs": "^1.0",
         "drupal/entity_browser": "^1.0",
         "drupal/entity_print": "^2.0",

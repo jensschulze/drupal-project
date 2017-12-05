@@ -38,10 +38,15 @@ class ScriptHandler {
     // Prepare the settings file for installation
     $composerRoot = $drupalFinder->getComposerRoot();
     $configDir = $composerRoot . '/config';
+    $syncDir = $configDir . '/sync';
     $settingsFile = $configDir . '/settings.php';
     if (!$fs->exists($configDir)) {
       $fs->mkdir($configDir);
       $fs->touch($configDir . '/.gitkeep');
+    }
+    if (!$fs->exists($syncDir)) {
+      $fs->mkdir($syncDir);
+      $fs->touch($syncDir . '/.gitkeep');
     }
     if (!$fs->exists($settingsFile) and $fs->exists($drupalRoot . '/sites/default/default.settings.php')) {
       $fs->copy($drupalRoot . '/sites/default/default.settings.php', $settingsFile);
@@ -49,13 +54,13 @@ class ScriptHandler {
       require_once $drupalRoot . '/core/includes/install.inc';
       $settings['config_directories'] = [
         CONFIG_SYNC_DIRECTORY => (object) [
-          'value' => Path::makeRelative($configDir . '/sync', $drupalRoot),
+          'value' => Path::makeRelative($syncDir, $drupalRoot),
           'required' => TRUE,
         ],
       ];
       drupal_rewrite_settings($settings, $settingsFile);
       $fs->chmod($settingsFile, 0666);
-      $event->getIO()->write('Create a sites/default/settings.php file with chmod 0666');
+      $event->getIO()->write('Create a settings.php file with chmod 0666');
     }
 
     // Create the files directory with chmod 0777

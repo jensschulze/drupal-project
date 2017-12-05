@@ -36,19 +36,26 @@ class ScriptHandler {
     }
 
     // Prepare the settings file for installation
-    if (!$fs->exists($drupalRoot . '/sites/default/settings.php') and $fs->exists($drupalRoot . '/sites/default/default.settings.php')) {
-      $fs->copy($drupalRoot . '/sites/default/default.settings.php', $drupalRoot . '/sites/default/settings.php');
+    $composerRoot = $drupalFinder->getComposerRoot();
+    $configDir = $composerRoot . '/config';
+    $settingsFile = $configDir . '/settings.php';
+    if (!$fs->exists($configDir)) {
+      $fs->mkdir($configDir);
+      $fs->touch($configDir . '/.gitkeep');
+    }
+    if (!$fs->exists($settingsFile) and $fs->exists($drupalRoot . '/sites/default/default.settings.php')) {
+      $fs->copy($drupalRoot . '/sites/default/default.settings.php', $settingsFile);
       require_once $drupalRoot . '/core/includes/bootstrap.inc';
       require_once $drupalRoot . '/core/includes/install.inc';
       $settings['config_directories'] = [
         CONFIG_SYNC_DIRECTORY => (object) [
-          'value' => Path::makeRelative($drupalFinder->getComposerRoot() . '/config/sync', $drupalRoot),
+          'value' => Path::makeRelative($configDir . '/sync', $drupalRoot),
           'required' => TRUE,
         ],
       ];
-      drupal_rewrite_settings($settings, $drupalRoot . '/sites/default/settings.php');
-      $fs->chmod($drupalRoot . '/sites/default/settings.php', 0666);
-      $event->getIO()->write("Create a sites/default/settings.php file with chmod 0666");
+      drupal_rewrite_settings($settings, $settingsFile);
+      $fs->chmod($settingsFile, 0666);
+      $event->getIO()->write('Create a sites/default/settings.php file with chmod 0666');
     }
 
     // Create the files directory with chmod 0777
@@ -56,7 +63,7 @@ class ScriptHandler {
       $oldmask = umask(0);
       $fs->mkdir($drupalRoot . '/sites/default/files', 0777);
       umask($oldmask);
-      $event->getIO()->write("Create a sites/default/files directory with chmod 0777");
+      $event->getIO()->write('Create a sites/default/files directory with chmod 0777');
     }
   }
 

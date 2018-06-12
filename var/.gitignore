@@ -1,0 +1,4 @@
+*
+!.gitignore
+!db-data/.gitignore
+!db-dump/.gitignore

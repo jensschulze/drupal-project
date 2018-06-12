@@ -31,7 +31,7 @@ class ScriptHandler {
     foreach ($dirs as $dir) {
       if (!$fs->exists($drupalRoot . '/'. $dir)) {
         $fs->mkdir($drupalRoot . '/'. $dir);
-        $fs->touch($drupalRoot . '/'. $dir . '/.gitkeep');
+        $fs->touch($drupalRoot . '/'. $dir . '/.gitignore');
       }
     }
 
@@ -42,11 +42,11 @@ class ScriptHandler {
     $settingsFile = $configDir . '/settings.php';
     if (!$fs->exists($configDir)) {
       $fs->mkdir($configDir);
-      $fs->touch($configDir . '/.gitkeep');
+      $fs->touch($configDir . '/.gitignore');
     }
     if (!$fs->exists($syncDir)) {
       $fs->mkdir($syncDir);
-      $fs->touch($syncDir . '/.gitkeep');
+      $fs->touch($syncDir . '/.gitignore');
     }
     if (!$fs->exists($settingsFile) and $fs->exists($drupalRoot . '/sites/default/default.settings.php')) {
       $fs->copy($drupalRoot . '/sites/default/default.settings.php', $settingsFile);

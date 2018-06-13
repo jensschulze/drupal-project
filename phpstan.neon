@@ -1,5 +1,5 @@
 parameters:
-    bootstrap: %currentWorkingDirectory%/vendor/autoload.php
+    bootstrap: %currentWorkingDirectory%/phpstan-autoload.php
     autoload_directories:
         - %currentWorkingDirectory%/web/core/
         - %currentWorkingDirectory%/web/modules/

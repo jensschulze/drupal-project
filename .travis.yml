@@ -20,6 +20,7 @@ before_install:
   - phpenv config-rm xdebug.ini
   - composer --verbose self-update --$COMPOSER_CHANNEL
   - composer --version
+  - composer global require hirak/prestissimo
 
 install:
   - composer --verbose install

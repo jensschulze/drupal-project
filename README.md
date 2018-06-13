@@ -16,7 +16,11 @@ Tested under the [newest "production ready" PHP version](http://php.net/supporte
 ## Usage
 
 ```
-composer create-project jensschulze/drupal-project:develop-dev some-dir --stability dev --no-interaction
+composer create-project jensschulze/drupal-project some-dir --stability dev --no-interaction
+```
+
+```
+composer create-project jensschulze/drupal-project:dev-develop some-dir --stability dev --no-interaction
 ```
 
 ## Suggestions
